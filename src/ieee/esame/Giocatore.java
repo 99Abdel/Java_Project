@@ -1,6 +1,7 @@
 package ieee.esame;
 
 import it.unibs.fp.mylib.EstrazioniCasuali;
+import it.unibs.fp.mylib.InputDati;
 
 public class Giocatore {
 
@@ -36,32 +37,39 @@ public class Giocatore {
 		
 	}
 	
-	public void muoviPedina() {
-		
-		posizione += lanciaDado();
-		
+	public void muoviPedina(Mappa mappa, int valore) {
+	
+		posizione += valore%mappa.getPercorso().size();
+		System.out.printf("%s ORA SEI NELLA CELLA %d",nome, posizione);
+		System.out.println(mappa.getPercorso().get(posizione).toString());
 	}
 
 	
-	public int lanciaDado() {
+	public int lanciaDado(Mappa mappa) {
 
-		return EstrazioniCasuali.estraiIntero(2, 11);
+		System.out.println("\n\n%s LANCIA UN DADO ");
+		InputDati.leggiIntero("\nPER LANCIARE UN DADO INSERIRE 0 --> ");
+		int numero =EstrazioniCasuali.estraiIntero(2, 11); 
+		System.out.printf("E' USCITO %d", numero);
+		return numero;
 
 	}
 	
 	public boolean isMilionario() {
 		
-		if(denaro >= 1_000_000)
+		if(denaro >= 1_000_000) {
+			System.out.printf("GIOCATORE %s HAI VINTO!", nome);
 			return true;
-		
+		}
 		return false;
 	}
 	
 	public boolean inBancarotta() {
 		
-		if(denaro <= 0)
+		if(denaro <= 0) {
+			System.out.printf("GIOCATORE %s HAI PERSO", nome);
 			return true;
-		
+		}
 		return false;
 	}
 	
