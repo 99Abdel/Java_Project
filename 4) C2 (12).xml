@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<map size="12" title="C2">
+    <!--
+    Programma Arnaldo 2019 - Esame
+    File XML di testing per il modulo A2 - nucleo 2
+    Il seguente documento è stato prodotto da Paolo Faustini per lo Student Branch IEEE dell'Università degli Studi di Brescia.
+    -->
+    <cell id="0" name="Partenza" type="iniziale" />
+    
+    <cell id="1" name="Cella1" type="probabilita" >
+        <amount value="100000" />
+        <message>
+            <line value="Maturano le cedole delle vostre cartelle di rendita" />
+            <line value="Ritirate 100000 I€€€" />
+        </message>
+    </cell>
+    
+    <cell id="2" name="Cella2" type="probabilita" >
+        <amount value="20000" />
+        <message>
+            <line value="Avete vinto il secondo premio a un concorso di bellezza" />
+            <line value="Ritirate 20000 I€€€" />
+        </message>
+    </cell>
+    
+    <cell id="3" name="Ticket" type="ticket" />
+    
+    <cell id="4" name="Cella3" type="imprevisto" >
+        <amount value="15000" />
+        <message>
+            <line value="Dovete pagare un contributo per la miglioria stradale" />
+            <line value="Pagate 15000 I€€€" />
+        </message>
+    </cell>
+    
+    <cell id="5" name="Stazione Ovest" type="stazione" />
+    
+    <cell id="6" name="Cella5" type="imprevisto" >
+        <amount value="150000" />
+        <message>
+            <line value="Siete stati condannati per evasione fiscale" />
+            <line value="Patteggiate un pagamento di 150000 I€€€" />
+        </message>
+    </cell>
+    
+    <cell id="7" name="Prigione" type="prigione" >
+        <amount value="10000" />
+    </cell>
+    
+    <cell id="8" name="Cella6" type="probabilita" >
+        <amount value="10000" />
+        <message>
+            <line value="Avete vinto un terno al lotto" />
+            <line value="Ritirate 10000 I€€€" />
+        </message>x
+    </cell>
+    
+    <cell id="9" name="Cella7" type="probabilita" >
+        <amount value="30000" />
+        <message>
+            <line value="Avete vinto una causa legale" />
+            <line value="Ritirate 30000 I€€€" />
+        </message>
+    </cell>
+    
+    <cell id="10" name="Stazione Est" type="stazione" />
+    
+    <cell id="11" name="Cella9" type="imprevisto" >
+        <amount value="10000" />
+        <message>
+            <line value="La banca vi paga gli interessi del vostro Conto Corrente" />
+            <line value="Ritirate 10000 I€€€" />
+        </message>
+    </cell>
+</map>

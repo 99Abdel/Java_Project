@@ -78,8 +78,8 @@ public class PartitaMultiplayer {
 	private static boolean turnoGiocatori(Mappa mappa, ArrayList<Giocatore> giocatori,
 			ArrayList<Casella> caselle_stazione, int i, ArrayList<Giocatore> perdenti) {
 
-		int dado = giocatori.get(i).lanciaDado(mappa);
-		giocatori.get(i).muoviPedina(mappa, dado, caselle_stazione);
+		
+		giocatori.get(i).muoviPedina(mappa, caselle_stazione);
 		System.out.println(giocatori.get(i).toString());
 		InputDati.leggiIntero("INSERIRE 0 PER CONTINUARE --> ");
 

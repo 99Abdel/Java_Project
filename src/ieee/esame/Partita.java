@@ -37,10 +37,11 @@ public class Partita {
 		//CICLO CHE DETERMINA LA CONTUNUAZIONE DEL GIOCO
 		while(!giocatoreA.isMilionario() && !giocatoreA.inBancarotta()) {
 			
-			int dado = giocatoreA.lanciaDado(mappa);
-			giocatoreA.muoviPedina(mappa, dado, caselle_stazione);
+			
+			giocatoreA.muoviPedina(mappa, caselle_stazione);
 			System.out.println(giocatoreA.toString());
-			//SOLO PER FERMARE MOMENTANEAMENTE LA STAMPA CICLICA
+			
+			//inserire un numero SOLO PER FERMARE MOMENTANEAMENTE LA STAMPA CICLICA
 			InputDati.leggiIntero("INSERIRE 0 PER CONTINUARE --> ");
 		}
 		//CONDIZIONI DI USCITA 

@@ -25,7 +25,7 @@ public class Menu {
 			switch (scelta) {
 			
 			case 1: 
-				
+				//PARTITA CON GIOCATORE SINGOLO
 				Partita.iniziaPartita();
 				
 				break;
