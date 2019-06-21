@@ -58,7 +58,7 @@ public class Casella {
 	
 	@Override
 	public String toString() {
-		return "Casella [nome=" + nome + ", id=" + id + ", tipologia=" + tipologia + ", messaggio=" + messaggio
+		return "Casella [nome=" + nome + ", id=" + id + ", messaggio=" + messaggio
 				+ ", ammonto=" + ammonto + "]";
 	}
 	

@@ -38,11 +38,12 @@ public class LetturaXML {
 	private final static int CELLA_INIZIALE = 0;
 	private final static int CELLA_PROBABILITA = 1;
 	private final static int CELLA_IMPREVISTO = 2;
-	private static final int CELLA_STAZIONE = 3;
+	public static final int CELLA_STAZIONE = 3;
 	private static final int CELL = 4;
 	private static final int AMOUNT = 5;
 	private static final int MESSAGE = 6;
 	private static final int LINE = 7;
+	private static final int MAP = 8;
 	
 	
 	public static void caricaDatiMappa(Mappa mappa, XMLStreamReader lettoreDati) {
@@ -101,6 +102,11 @@ public class LetturaXML {
 						mappa.getPercorso().get(numeroCella).getMessaggio().append(lettoreDati.getAttributeValue(0));
 					
 					}
+					else if(nometag == MAP) {
+						
+						mappa.setNome(lettoreDati.getAttributeValue(1));
+						
+					}
 
 					break;
 
@@ -142,6 +148,8 @@ public class LetturaXML {
 
 		else if ("line".equalsIgnoreCase(lettoreDati.getLocalName()))
 			return LINE;
+		else if("map".equalsIgnoreCase(lettoreDati.getLocalName()))
+			return MAP;
 
 		return -1;
 	}
