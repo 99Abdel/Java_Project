@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<map size="20" title="C1-20">
+    <!--
+    Programma Arnaldo 2019 - Esame
+    File XML di testing per il modulo A2 - nucleo 2
+    Il seguente documento è stato prodotto da Paolo Faustini per lo Student Branch IEEE dell'Università degli Studi di Brescia.
+    -->
+    <cell id="0" name="Partenza" type="iniziale" />
+    
+    <cell id="1" name="nomeDaAssegnare" type="proprieta" >
+        <costs base="1000" house="2000" hotel="10000" />
+        <earnings base="500" house="2000" hotel="15000" />
+    </cell>
+    
+    <cell id="2" name="Stazione Nikita" type="stazione" />
+    
+    <cell id="3" name="ProbUML" type="probabilita" >
+        <amount value="2000" />
+        <message>
+            <line value="Avete fatto un'ottima progettazione:" />
+            <line value="il diagramma delle classi è stato rispettato quasi totalmente" />
+            <line value="Ritirate un premio di 2000 I€€€" />
+        </message>
+    </cell>
+
+    <cell id="4" name="7.4C" type="proprieta" >
+        <costs base="2000" house="4000" hotel="20000" />
+        <earnings base="1000" house="4000" hotel="30000" />
+    </cell>
+
+    <cell id="5" name="Eclisse" type="proprieta" >
+        <costs base="3000" house="6000" hotel="30000" />
+        <earnings base="1500" house="6000" hotel="45000" />
+    </cell>
+    
+    <cell id="6" name="Stazione Daniele" type="stazione" />
+    
+    <cell id="7" name="ImprEreditarieta" type="imprevisto" >
+        <amount value="5000" />
+        <message>
+            <line value="Utilizzate male l'ereditarietà" />
+            <line value="Pagate 5000 I€€€" />
+        </message>
+    </cell>
+
+    <cell id="8" name="KT" type="proprieta" >
+        <costs base="4000" house="8000" hotel="40000" />
+        <earnings base="2000" house="8000" hotel="60000" />
+    </cell>
+
+    <cell id="9" name="Pi Greco" type="proprieta" >
+        <costs base="5000" house="10000" hotel="50000" />
+        <earnings base="2500" house="10000" hotel="75000" />
+    </cell>
+    
+    <cell id="10" name="ImprCommenti" type="imprevisto" >
+        <amount value="10000" />
+        <message>
+            <line value="Non commentate il vostro codice" />
+            <line value="Versate un compenso di 10000 I€€€ all'associazione" />
+            <line value="-Programmatori vittime di codice non commentato-" />
+        </message>
+    </cell>
+    
+    <cell id="11" name="Stazione Paolo" type="stazione" />
+
+    <cell id="12" name="Codice Husky" type="proprieta" >
+        <costs base="6000" house="12000" hotel="60000" />
+        <earnings base="3000" house="12000" hotel="90000" />
+    </cell>
+    
+    <cell id="13" name="No Fantasy" type="proprieta" >
+        <costs base="7000" house="14000" hotel="70000" />
+        <earnings base="3500" house="14000" hotel="105000" />
+    </cell>    
+    
+    <cell id="14" name="ImprGit" type="imprevisto" >
+        <amount value="8000" />
+        <message>
+            <line value="Utilizzate in maniera impropria Git e GitHub," />
+            <line value="caricando una cartella compressa in una repository..." />
+            <line value="Pagate 8000 I€€€ di multa" />
+        </message>
+    </cell>
+
+    <cell id="15" name="Porygon" type="proprieta" >
+        <costs base="8000" house="16000" hotel="80000" />
+        <earnings base="4000" house="16000" hotel="120000" />
+    </cell>
+    
+    <cell id="16" name="Stazione Flavio" type="stazione" />
+    
+    <cell id="17" name="ProbInput" type="probabilita" >
+        <amount value="3000" />
+        <message>
+            <line value="Il vostro programma è robusto contro utenti malintenzionati" />
+            <line value="Ritirate 3000 I€€€" />
+        </message>
+    </cell>
+
+    <cell id="18" name="QWERTY" type="proprieta" >
+        <costs base="9000" house="18000" hotel="90000" />
+        <earnings base="4500" house="18000" hotel="135000" />
+    </cell>
+
+    <cell id="19" name="M2" type="proprieta" >
+        <costs base="10000" house="20000" hotel="100000" />
+        <earnings base="5000" house="20000" hotel="150000" />
+    </cell>
+</map>
