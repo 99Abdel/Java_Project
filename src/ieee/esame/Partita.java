@@ -8,9 +8,14 @@ public class Partita {
 	
 	public static void iniziaPartita() {
 		
-		String nome = InputDati.leggiStringaNonVuota(NOME);
+		Mappa mappa = new Mappa();
+		LetturaXML.oggettiXml(mappa);
 		
-		Giocatore giocatoreA = new Giocatore(nome);
+		for (int i = 0; i < mappa.getPercorso().size(); i++) {
+			System.out.println(mappa.getPercorso().get(i));
+		}
+		
+		Giocatore giocatoreA = new Giocatore(InputDati.leggiStringaNonVuota(NOME));
 		
 		
 	}

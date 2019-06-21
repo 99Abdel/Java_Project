@@ -5,7 +5,7 @@ public class Casella {
 	private String nome;
 	private int id;
 	private int tipologia;
-	private StringBuffer messaggio;
+	private StringBuffer messaggio = new StringBuffer(" ");
 	private double ammonto;
 	
 	public Casella(int id, String nome, int tipologia) {
