@@ -8,7 +8,7 @@ import it.unibs.fp.mylib.InputDati;
 public class Giocatore {
 
 	private String nome;
-	private double denaro = 10000;
+	private double denaro = 1;
 	private int posizione = 0;
 
 	public Giocatore(String nome) {
@@ -39,19 +39,28 @@ public class Giocatore {
 
 	}
 
+	/**
+	 * METODO PER VARIARE IL VALORE DELL'ATTRIBUTO posizione; IL METODO STAMPA ANCHE
+	 * A VIDEO MESSAGGI ALL'UTENTE E GESTISCE IL CASO DELLE CELLE STAZIONE;
+	 * 
+	 * @param mappa
+	 * @param valore
+	 * @param caselle_stazione
+	 */
 	public void muoviPedina(Mappa mappa, int valore, ArrayList<Casella> caselle_stazione) {
 
 		posizione = ((posizione + valore) % mappa.getPercorso().size());
 
 		if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_STAZIONE) {
-			
+
 			int i = 0;
 			for (i = 0; i < caselle_stazione.size(); i++) {
 				System.out.println(i + ")" + caselle_stazione.get(i).toString());
 			}
-			int scelta = InputDati.leggiIntero("\n SEI FINITO IN UNA Casella STAZIONE SCEGLI QUALE ALTRA CASELLA STAZIONE ANDARE: ", 0, i-1);
+			int scelta = InputDati.leggiIntero(
+					"\n SEI FINITO IN UNA Casella STAZIONE SCEGLI QUALE ALTRA CASELLA STAZIONE ANDARE: ", 0, i - 1);
 			posizione = caselle_stazione.get(scelta).getId();
-			
+
 		} else {
 			System.out.printf("%s ORA SEI NELLA CELLA %d\n", nome, posizione);
 			System.out.println(mappa.getPercorso().get(posizione).toString());
@@ -60,11 +69,18 @@ public class Giocatore {
 		}
 	}
 
+	/**
+	 * METODO PER ESTRARRE NUMERI CASUALI IN PIU STAMPA ANCHE A VIDEO MESSAGGI
+	 * ALL'UTENTE
+	 * 
+	 * @param mappa
+	 * @return
+	 */
 	public int lanciaDado(Mappa mappa) {
 
 		System.out.printf("\n\n%s LANCIA UN DADO", nome);
 		InputDati.leggiIntero("\nPER LANCIARE UN DADO INSERIRE 0 --> ");
-		int numero = EstrazioniCasuali.estraiIntero(1, 5);
+		int numero = EstrazioniCasuali.estraiIntero(2, 11);
 		System.out.printf("\nE' USCITO %d \n", numero);
 		return numero;
 
@@ -90,7 +106,7 @@ public class Giocatore {
 
 	@Override
 	public String toString() {
-		return "\nGiocatore [nome=" + nome + ", denaro possedudo=" + denaro + ", posizone pedina= " + posizione + "]";
+		return "\nGiocatore [nome=" + nome + ", denaro posseduto=" + denaro + ", posizone pedina= " + posizione + "]";
 	}
 
 }

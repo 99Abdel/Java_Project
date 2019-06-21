@@ -1,10 +1,13 @@
 package ieee.esame;
 
+
 public class Casella {
 
 	private String nome;
 	private int id;
+	//LA TIPOLOGIA è STATA NUMERATA PER COMODITA:  0 = INIZIALE, 1 = PROBABILITA, 2 = IMPREVISTO, 3 = STAZIONE;
 	private int tipologia;
+	// STRINGBUFFER PERCHE ENTRAMBI I MESSAGGI DI XML VENGONO SALVATI IN UNA SOLA VARIABILE
 	private StringBuffer messaggio = new StringBuffer(" ");
 	private double ammonto;
 	

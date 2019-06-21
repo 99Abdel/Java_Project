@@ -8,11 +8,19 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
 
-
+/**
+ * CLASSE PER LA CREAZIOENE DI OGGETTI PER IL PARSING E LA SUCCESSIVA LETTURA DI FILE XML 
+ * @author acer
+ *
+ */
 public class LetturaXML {
 
 	private final static String FILE_NOME = "1) base (10).xml";
 	
+	/**
+	 * METODO PER LA CREAZIONE DEI PARSING OBJECTS
+	 * @param mappa
+	 */
 	public static void oggettiXml(Mappa mappa) {
 		
 		XMLInputFactory generatore = null;
@@ -35,20 +43,29 @@ public class LetturaXML {
 
 	}
 	
+	//COSTANTI CON CUI HO NUMERATO LA TIPOLOGIA DI CELLA INVECE CHE LAVORARE CON LE STRINGHE
 	private final static int CELLA_INIZIALE = 0;
 	private final static int CELLA_PROBABILITA = 1;
 	private final static int CELLA_IMPREVISTO = 2;
 	public static final int CELLA_STAZIONE = 3;
+	
+	//COSTANTI DI APPOGGIO CHE MI SERVONO PER IDENTIFICARE IL TAG IN CUI MI TROVO
 	private static final int CELL = 4;
 	private static final int AMOUNT = 5;
 	private static final int MESSAGE = 6;
 	private static final int LINE = 7;
 	private static final int MAP = 8;
 	
-	
+	/**
+	 * METODO PER CARICARE I DATI DA XML NELLE CASELLE CONTENUTE NELLA MAPPA
+	 * @param mappa
+	 * @param lettoreDati
+	 */
 	public static void caricaDatiMappa(Mappa mappa, XMLStreamReader lettoreDati) {
-
+		
+		//VARIABILE DI APPOGGIO CHE ASSUME IL VALORE DELLE COSTANTI SOPRA DEFINITE
 		int nometag = 0;
+		//NUMERO DELLA CASELLA CHE CORRISPONDE ALL'ID;
 		int numeroCella = 0;
 		
 		int id;
@@ -134,7 +151,11 @@ public class LetturaXML {
 		}
 
 	}
-	
+	/**
+	 * METODO PER VARIARE IL VALORE DELLA VARIABILE nomeTag DA USARE NEI SUCCESSIVI CONTROLLI IN START_ELEMENT;
+	 * @param lettoreDati
+	 * @return
+	 */
 	private static int tipologiaTagApertura(XMLStreamReader lettoreDati) {
 
 		if ("cell".equalsIgnoreCase(lettoreDati.getLocalName()))
