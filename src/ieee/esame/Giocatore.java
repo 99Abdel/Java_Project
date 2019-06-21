@@ -64,7 +64,7 @@ public class Giocatore {
 
 		System.out.printf("\n\n%s LANCIA UN DADO", nome);
 		InputDati.leggiIntero("\nPER LANCIARE UN DADO INSERIRE 0 --> ");
-		int numero = EstrazioniCasuali.estraiIntero(2, 11);
+		int numero = EstrazioniCasuali.estraiIntero(1, 5);
 		System.out.printf("\nE' USCITO %d \n", numero);
 		return numero;
 
