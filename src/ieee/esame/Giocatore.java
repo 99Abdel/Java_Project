@@ -8,7 +8,7 @@ import it.unibs.fp.mylib.InputDati;
 public class Giocatore {
 
 	private final static String MESS_PRIGIONE = "SEI FINITO IN PRIGIONE SCLEGLI COSA FARE: ";
-	
+
 	private String nome;
 	private double denaro = 1;
 	private int posizione = 0;
@@ -55,28 +55,20 @@ public class Giocatore {
 
 		posizione = ((posizione + lanciaDado()) % mappa.getPercorso().size());
 
-		if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_PRIGIONE) {
+		// gestione casella tiket
+		if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_TIKET)
+			tiket++;
+		// condizione per gestire la pedina nelle celle di stazione
+		else if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_STAZIONE) {
 
-			System.out.println(MESS_PRIGIONE);
-			
-		} 
-		else {
-			//gestione casella tiket
-			if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_TIKET)
-				tiket++;
-			// condizione per gestire la pedina nelle celle di stazione
-			else if (mappa.getPercorso().get(posizione).getTipologia() == LetturaXML.CELLA_STAZIONE) {
+			casellaStazione(caselle_stazione);
 
-				casellaStazione(caselle_stazione);
-
-			} 
-			else {
-				//gestione celle basilari ossia PROBABILITA E IMPREVISTI
-				System.out.printf("%s ORA SEI NELLA CELLA %d\n", nome, posizione);
-				System.out.println(mappa.getPercorso().get(posizione).toString());
-				double soldi = mappa.getPercorso().get(posizione).getAmmonto();
-				setDenaro(soldi);
-			}
+		} else {
+			// gestione celle basilari ossia PROBABILITA E IMPREVISTI
+			System.out.printf("%s ORA SEI NELLA CELLA %d\n", nome, posizione);
+			System.out.println(mappa.getPercorso().get(posizione).toString());
+			double soldi = mappa.getPercorso().get(posizione).getAmmonto();
+			setDenaro(soldi);
 		}
 
 	}
