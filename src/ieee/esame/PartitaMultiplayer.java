@@ -105,16 +105,13 @@ public class PartitaMultiplayer {
 
 		System.out.println("\n\nECCO LA VOSTRA CLASSIFICA: ");
 
-		// faccio una copia dell'array in una priorityqueue in modo che mi vengano
-		// ordinati i giocatori in automatico
+		
 		int i = 0;
 		
 		if (!giocatori.isEmpty()) {
-			PriorityQueue<Giocatore> classifica = new PriorityQueue<Giocatore>();
-			classifica = (PriorityQueue<Giocatore>) giocatori.clone();
 
-			for (i = 0; i < classifica.size(); i++) {
-				System.out.println(classifica.poll().toString());
+			for (i = 0; i < giocatori.size(); i++) {
+				System.out.println(( giocatori).get(i).toString());
 			}
 
 		}
